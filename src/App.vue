@@ -29,10 +29,12 @@ body{
 header {
   display: flex;
   justify-content: center;
+  height: 100px;
 }
 
 header div img {
   width: 200px;
+  margin-bottom: 20px;
 }
 
 

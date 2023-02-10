@@ -7,7 +7,7 @@ const pokemon = defineProps
 <template>
     <div 
     class="card selected-card"
-    :class="loading ? '' : 'animate__animated animate__flipInY'"
+    :class="loading ? '' : 'animate__animated animate__fadeInRight'"
     >
         <img 
         v-if="pokemon.name"
