@@ -1,5 +1,5 @@
 <script setup>
-const pokemon = defineProps(["name", "urlBaseSvg"])
+const pokemon = defineProps(["name", "baseSvgUrl"])
 
 </script>
 
@@ -7,7 +7,7 @@ const pokemon = defineProps(["name", "urlBaseSvg"])
     <div class="col-4 col-md-6 col-xl-3">
         <div class="card p-2 mb-3 card-list">
             <img 
-            :src="urlBaseSvg" class="card-img-top mt-2" 
+            :src="baseSvgUrl" class="card-img-top mt-2" 
             alt="..."
             height="80"
             />

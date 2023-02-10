@@ -1,6 +1,6 @@
 <script setup>
 const pokemon = defineProps
-([ "name", "xp", "height", "weight", "img", "loading", "type" ])
+([ "name", "xp", "height", "weight", "img", "loading", "type", "moves" ])
 
 </script>
 
@@ -35,18 +35,21 @@ const pokemon = defineProps
                     <span>{{ pokemon.height }}</span>
                 </section>
             </div>
-
-            <div class="d-none d-md-block">
-                <div class="row text-center mt-3">
-                    <section class="col">
-                        <strong>XP: </strong>
-                        <span>{{ pokemon.xp }}</span>
-                    </section>
-                    <section class="col">
-                        <strong>Tipo: </strong>
-                        <span> {{ pokemon.type }}</span>
-                    </section>
-                </div>
+            <div class="row text-center">
+                <section class="col">
+                    <strong>XP: </strong>
+                    <span>{{ pokemon.xp }}</span>
+                </section>
+                <section class="col">
+                    <strong>Tipo: </strong>
+                    <span>{{ pokemon.type }}</span>
+                </section>
+            </div>
+            <div class="row text-center">
+                <section class="col">
+                    <strong>Ataques: </strong>
+                    <span>{{ pokemon.moves }}</span>
+                </section>
             </div>
         </div>
     </div>
@@ -76,7 +79,7 @@ div img {
 @media (max-width: 768px) {
     .selected-card {
         height: 30vh;
-        width: 40%;
+        width: 80%;
         margin: 0 auto 10px auto;
     }
     .selected-card img{

@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, reactive, ref, computed } from "vue";
-import ListPokemons from "../components/ListPokemons.vue"
+import PokemonList from "../components/PokemonList.vue"
 import SelectedCard from "../components/SelectedCard.vue"
 
-let urlBaseSvg = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/")
+let baseSvgUrl = ref("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/")
 let pokemons = reactive(ref());
 let searchPokemonField = ref("")
 let pokemonSelected = reactive(ref());
@@ -52,6 +52,7 @@ String.prototype.capitalize = function() {
           :height="pokemonSelected?.height"
           :weight="pokemonSelected?.weight"
           :type="pokemonSelected?.types.map(types => types.type.name).toString().capitalize()"
+          :moves="pokemonSelected?.moves.map(moves => moves.move.name).slice(0, 2).toString().capitalize()"
           :img="pokemonSelected?.sprites.other.dream_world.front_default"
           :loading="loading"
 
@@ -67,7 +68,7 @@ String.prototype.capitalize = function() {
                 hidden 
                 for="searchPokemonField" 
                 class="form-label">
-                Pesquisar...
+                Digite o nome do Pokémon desejado
                 </label>
 
                 <input 
@@ -75,14 +76,14 @@ String.prototype.capitalize = function() {
                 type="text" 
                 class="form-control" 
                 id="searchPokemonField" 
-                placeholder="Pesquisar...">
+                placeholder="Digite o nome do Pokémon desejado">
               </div>
 
-              <ListPokemons 
+              <PokemonList 
               v-for="pokemon in pokemonsFiltered"
               :key="pokemon.name"
               :name="pokemon.name.capitalize()"
-              :urlBaseSvg="urlBaseSvg + pokemon.url.split('/')[6] + '.svg'"
+              :baseSvgUrl="baseSvgUrl + pokemon.url.split('/')[6] + '.svg'"
               @click="selectPokemon(pokemon)"
               />
             </div>
