@@ -19,11 +19,11 @@ const pokemon = defineProps
         v-else
         src="../assets/poke-favicon.png"
         class="card-img-top pt-2"
-        alt="???"
+        alt="imagem de uma Pokebola"
         >
 
         <div class="card-body">
-            <h5 class="card-title text-center">{{ pokemon.name || '???' }}</h5>
+            <h5 class="card-title text-center">{{  pokemon.name || 'Qual Pokémon você vai escolher?' }}</h5>
             <hr>
             <div class="row text-center">
                 <section class="col">
@@ -45,6 +45,7 @@ const pokemon = defineProps
                     <span>{{ pokemon.type }}</span>
                 </section>
             </div>
+            <hr>
             <div class="row text-center">
                 <section class="col">
                     <strong>Ataques: </strong>
@@ -68,7 +69,7 @@ const pokemon = defineProps
 }
 
 .card-body {
-    color: #dfdfdf;
+    color: #dfdfdfe6;
 }
 
 div img {
