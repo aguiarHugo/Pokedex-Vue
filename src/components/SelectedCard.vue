@@ -45,8 +45,7 @@ const pokemon = defineProps
                     <span>{{ pokemon.type }}</span>
                 </section>
             </div>
-            <hr>
-            <div class="row text-center">
+            <div class="row text-center attack">
                 <section class="col">
                     <strong>Ataques: </strong>
                     <span>{{ pokemon.moves }}</span>
@@ -85,6 +84,10 @@ div img {
     }
     .selected-card img{
         height: 100px;
+    }
+
+    .attack {
+        margin-bottom: 20px;
     }
 }
 </style>
