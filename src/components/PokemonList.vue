@@ -32,4 +32,11 @@ const pokemon = defineProps(["name", "baseSvgUrl"])
     color: #DFDFDF;
 }
 
+@media (max-width: 768px) {
+    .card-list {
+        max-height: 140px;
+        font-size: 14px;
+    }
+}
+
 </style>
