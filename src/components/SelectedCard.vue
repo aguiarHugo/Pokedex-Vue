@@ -79,7 +79,7 @@ div img {
 
 @media (max-width: 768px) {
     .selected-card {
-        height: 39vh;
+        height: 40vh;
         width: 90%;
         margin: 0 auto 10px auto;
     }
