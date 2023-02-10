@@ -3,6 +3,8 @@
 ## 💻 Projeto
 Projeto desenvolvido afim de aprimorar e conhecer novos conceitos do VueJs.
 
+Para acessar o projeto, [clique aqui](https://hugopokedex.netlify.app/)!
+
 <p>
     <img alt="Projeto Pokédex" src="public/preview.png" width="50%">
 </p>
