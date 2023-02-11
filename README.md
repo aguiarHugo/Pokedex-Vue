@@ -20,8 +20,8 @@ VueJs
 ## API Utilizada
 https://pokeapi.co/
 ## Referências
-https://www.youtube.com/@yurimarcon                                        
+https://www.youtube.com/@yurimarcon                                                                                
+https://www.youtube.com/watch?v=c3bCLkcsUHo                                                                           
 ## Outros
 https://cssgradient.io/                      
 https://animate.style/
-https://www.youtube.com/watch?v=c3bCLkcsUHo
